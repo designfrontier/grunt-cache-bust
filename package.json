@@ -17,7 +17,9 @@
     "node": ">= 0.8.0"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "devDependencies": {
     "grunt-contrib-clean": "~0.5.0",
@@ -30,7 +32,8 @@
     "grunt": "~0.4.0"
   },
   "dependencies": {
-    "cheerio": "~0.20.0"
+    "cheerio": "~0.20.0",
+    "snyk": "^1.192.4"
   },
   "keywords": [
     "grunt",
@@ -38,5 +41,6 @@
     "cache",
     "bust",
     "bust assets"
-  ]
+  ],
+  "snyk": true
 }
